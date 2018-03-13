@@ -1,0 +1,33 @@
+<div *ngIf="restaurante">
+    <h1>{{ restaurante.RNome }} encontrado!</h1>
+    <div>
+        Pratos do {{restaurante.RNome}}:
+        <ul class="pratos">
+            <li *ngFor="let prato of pratos">
+                <span>{{prato.PNome}}</span>
+            </li>
+        </ul>  
+    </div>
+    
+    <div>
+            <button id = "b01" 
+                    (click) = "editRestaurante()">
+                    <img width="12" alt="" src="assets/imagens/white-pencil.png"/>
+                    Editar
+            </button>
+                
+            <button id = "b02" 
+                    (click) = "deleteRestaurante()">
+                    <img width="10" alt="" src="assets/imagens/cancel.png"/>
+                    Excluir
+            </button>   
+    </div>
+</div>
+
+<div *ngIf="!restaurante">
+    <h1>Restaurante não encontrado!</h1>
+</div>
+
+<div>
+    <button (click)="voltar()">Voltar</button>
+</div>

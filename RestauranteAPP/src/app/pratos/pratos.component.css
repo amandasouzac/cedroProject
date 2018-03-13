@@ -1,0 +1,52 @@
+.pratos {
+  margin: 0 0 2em 0;
+  list-style-type: none;
+  padding: 0;
+  width: 15em;
+}
+
+h1 {
+  font-size: 1.6em;
+  color: #55cbcf;
+  margin-bottom: 2;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 64%;
+  margin-left:auto; 
+  margin-right:auto;
+  border: 3px solid #0a0a0a;
+}
+
+td, th {
+  border: 1px solid #0a0a0a;
+  text-align: left;
+  padding: 4px;
+}
+
+tr:nth-child(even) {
+  background-color:  rgb(255, 255, 255);
+}
+
+
+button {
+  background-color:  rgb(255, 255, 255);
+  border: none;
+  cursor: pointer; cursor: hand;
+}
+
+button#b01{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 243px;
+  position: static;
+  font-family: Arial;
+  background-color: rgb(34, 139, 48);
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer; cursor: hand;
+  color: rgb(252, 250, 250)
+}

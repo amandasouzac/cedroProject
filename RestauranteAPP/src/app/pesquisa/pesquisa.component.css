@@ -1,0 +1,51 @@
+h1 {
+    font-size: 1.6em;
+    color: #55cbcf;
+    margin-bottom: 2;
+}
+
+button {
+    margin-top: 20px;
+    font-family: Arial;
+    background-color: #eee;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer; cursor: hand;
+    color: #607D8B
+}
+  
+button:hover {
+  color: #55cbcf;
+  background-color: #CFD8DC;
+}
+  
+button:disabled {
+    background-color: #eee;
+    color: #ccc;
+    cursor: auto;
+}
+
+button#b01{
+    margin-top: 20px;
+    font-family: Arial;
+    background-color: rgb(34, 59, 139);
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer; cursor: hand;
+    color: rgb(252, 250, 250)
+}
+  
+button#b02{
+    margin-top: 20px;
+    font-family: Arial;
+    background-color: rgb(139, 34, 34);
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer; cursor: hand;
+    color: rgb(252, 250, 250)
+}
+
+  

@@ -1,0 +1,84 @@
+<h1>Cadastro de Pratos</h1>
+
+<div *ngIf="!prato">
+  <div>
+    <fieldset>
+      <legend>Dados</legend>
+  
+      <label>Restaurante:</label>
+      <div>
+        <select [(ngModel)]="selectedRestaurante">
+          <option *ngFor="let restaurante of restaurantes" [ngValue]="restaurante">{{restaurante.RNome}}</option>
+        </select> 
+      </div>
+  
+      <label>Prato:</label>
+      <div>
+        <input required #pratoPNome/>
+      </div>
+  
+      <label>Preço(R$):</label>
+      <div>
+        <input type="number" min="0.00" max="100.00" step="0.01" required #pratoPPreco/>
+      </div>
+  
+      <div>
+          <button id = "b01"
+                  (click) = "addPrato(selectedRestaurante, pratoPNome.value, pratoPPreco.value)">
+                  <img width="12" alt="" src="assets/imagens/save.png"/>
+                  Salvar
+          </button>
+  
+          <button id = "b02"
+                  (click)="voltar()">
+                  <img width="10" alt="" src="assets/imagens/cancel.png"/>
+                  Cancelar
+          </button>
+  
+      </div>
+      
+  
+    </fieldset>
+  </div>
+</div>
+
+<div *ngIf="prato">
+  <div>
+    <fieldset>
+      <legend>Dados</legend>
+  
+      <label>Prato:</label>
+      <div>
+        <input required #pratoPRestaurante value = {{prato.PRestaurante}} readonly/>
+      </div>
+  
+      <label>Prato:</label>
+      <div>
+        <input required #pratoPNome value = {{prato.PNome}} readonly/>
+      </div>
+  
+      <label>Preço(R$):</label>
+      <div>
+        <input type="number" min="0.00" max="1000.00" step="0.01" required #pratoPPreco [(ngModel)] = "prato.PPreco"/>
+      </div>
+  
+      <div>
+          <button id = "b01"
+                  (click) = "editPrato(pratoPPreco.value)">
+                  <img width="12" alt="" src="assets/imagens/save.png"/>
+                  Salvar
+          </button>
+  
+          <button id = "b02"
+                  (click)="voltar()">
+                  <img width="10" alt="" src="assets/imagens/cancel.png"/>
+                  Cancelar
+          </button>
+  
+      </div>
+      
+  
+    </fieldset>
+  </div>
+</div>
+

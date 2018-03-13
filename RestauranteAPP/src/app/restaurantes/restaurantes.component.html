@@ -1,0 +1,56 @@
+<h1>RESTAURANTES</h1>
+
+<div>
+    <fieldset>
+        <legend>Filtros</legend>
+                
+        <label>Nome:
+            <div>
+                <input #restauranteRNome />
+            </div>
+        </label>
+
+        <div>
+                <button id = "b01" 
+                        (click) = "pesquisarRestaurante(restauranteRNome.value)">
+                        <img width="10" alt="" src="assets/imagens/lupa.png"/>
+                        Pesquisar
+                </button>
+                    
+                <button id = "b02" 
+                        (click) = "addRestaurante()">
+                        <img width="10" alt="" src="assets/imagens/add.png"/>
+                        Cadastrar Novo Restaurante
+                </button>   
+        </div>
+
+    </fieldset>
+</div>
+
+<div>
+    <table>
+        <tr>
+            <td width="4%"></td>
+            <td width="4%"></td>
+            <th width="92%">Restaurante</th>
+        </tr>
+    
+        <tr *ngFor="let restaurante of restaurantes">
+            <td>
+                <button class="delete" title="delete restaurante"
+                    (click)="deleteRestaurante(restaurante)">
+                    <img width="10" alt="" src="assets/imagens/delete.png"/>
+                </button>
+            </td>
+            <td>
+                <button class="edit" title="edit restaurante"
+                    (click)="editRestaurante(restaurante)">
+                    <img width="10" alt="" src="assets/imagens/edit.png"/>
+                </button>
+            </td>
+            <td>{{restaurante.RNome}}</td>
+        </tr>
+    </table>
+</div>
+ 
+

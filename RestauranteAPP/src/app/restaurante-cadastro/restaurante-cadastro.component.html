@@ -1,0 +1,31 @@
+<h1> Cadastro de Restaurante </h1>
+
+<div>
+  <fieldset>
+    <legend>Dados</legend> 
+
+    <label>Nome do Restaurante:
+      <div>
+          <input #restauranteRNome />
+      </div>
+    </label>
+
+    <div>
+        <button id = "b01" 
+                (click) = "addRestaurante(restauranteRNome.value)">
+                <img width="12" alt="" src="assets/imagens/save.png"/>
+                Salvar
+        </button>
+
+        <button id = "b02"
+                (click)="voltar()">
+                <img width="10" alt="" src="assets/imagens/cancel.png"/>
+                Cancelar
+        </button>
+
+    </div>
+
+  </fieldset>
+  
+
+</div>

@@ -1,0 +1,41 @@
+h1 {
+    font-size: 1.6em;
+    color: #55cbcf;
+    margin-bottom: 0;
+}
+
+fieldset {
+    width: 60%;
+    border: 3px solid rgb(54, 54, 54);
+    padding: 25px;
+    margin: 25px;
+    margin-left:auto; 
+    margin-right:auto;
+}
+
+input{
+    width: 60%;
+    margin-top: 5px;
+}
+
+button#b01{
+    margin-top: 20px;
+    font-family: Arial;
+    background-color: rgb(34, 139, 48);
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer; cursor: hand;
+    color: rgb(252, 250, 250)
+}
+  
+button#b02{
+    margin-top: 20px;
+    font-family: Arial;
+    background-color: rgb(139, 34, 34);
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer; cursor: hand;
+    color: rgb(252, 250, 250)
+}

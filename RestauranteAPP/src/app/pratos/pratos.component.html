@@ -1,0 +1,36 @@
+<h1>PRATOS</h1>
+
+<div>
+    <button id = "b01" 
+            (click)="addPrato()">
+            <img width="10" alt="" src="assets/imagens/add.png"/>
+            Cadastrar Novo Prato
+    </button>
+</div>
+  
+<table>
+    <tr>
+      <td width="4%"></td>
+      <td width="4%"></td>
+      <th width="45%">Restaurante</th>
+      <th width="32%">Nome</th>
+      <th width="15%">Preço(R$)</th>
+    </tr>
+    <tr *ngFor="let prato of pratos">
+        <td>
+            <button class="delete" title="delete prato"
+            (click)="deletePrato(prato)">
+            <img width="10" alt="" src="assets/imagens/delete.png"/></button>
+        </td>
+        <td>
+            <button class="edit" title="edit prato"
+            (click)="editPrato(prato.PNome)">
+            <img width="10" alt="" src="assets/imagens/edit.png"/></button>
+        </td>
+        <td>{{prato.PRestaurante}}</td>
+        <td>{{prato.PNome}}</td>    
+        <td>{{prato.PPreco}}</td>   
+    </tr>
+</table>
+
+
